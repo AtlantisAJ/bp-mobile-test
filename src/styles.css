@@ -1,6 +1,7 @@
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: url("./image/backgroundImage.png");
+    background-image: url("./image/backgroundImage.png");
+    background-size: cover;
     color: white;
     min-height: 100vh;
     display: flex;
@@ -278,11 +279,11 @@ body {
 /* Контент модального окна */
 .modal-content {
     position: relative;
-    background: white;
+    background: transparent;
     border-radius: 10px;
     padding: 20px;
     width: 90%;
-    max-width: 400px;
+    /*max-width: 400px;*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }

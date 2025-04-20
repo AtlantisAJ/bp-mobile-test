@@ -10,7 +10,6 @@ body {
     justify-content: center;
     padding: 24px;
     margin: 0;
-
 }
 
 .container {
@@ -55,24 +54,22 @@ body {
 
 .feature-text-container {
     position: relative;
-    /*left: 8px;*/
+    width: 90%;
     top: 60px;
     right: 8px;
-    /*bottom: 12px;*/
     padding: 8px;
+    padding-bottom: 12px;
     box-sizing: border-box;
 }
 
 .feature-card p {
     margin: 0;
     font-family: 'SF Pro Display', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
     color: #fff;
     font-size: 12px;
-    line-height: 1.3;
-    text-align: left;
+    text-align: start;
     word-break: break-word;
-
 }
 
 .art-creation {
@@ -101,9 +98,6 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.pricing-option p {}
-
-
 .pricing-option:hover {
     transform: translateY(-2px);
 }
@@ -112,11 +106,6 @@ body {
     transform: translateY(0);
 }
 
-/*.yearly {*/
-/*    background-color: white;*/
-/*    color: black;*/
-/*    border: 2px solid #3b82f6;*/
-/*}*/
 .yearly {
     position: relative;
     display: flex;
@@ -125,7 +114,7 @@ body {
     width: 100%;
     height: 56px;
     border-radius: 40px;
-    background-color: #000; /* Основной цвет кнопки */
+    background-color: #24212E; /* Основной цвет кнопки */
     box-shadow: 4px -4px 10px 2px rgba(188, 31, 239, 0.8),
     4px -4px 10px 2px rgba(0, 53, 255, 0.8); /* Градиентная тень */
     color: white;
@@ -135,17 +124,37 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.yearly:hover {
-    transform: translateY(-2px);
-    box-shadow: 6px -6px 15px 3px rgba(188, 31, 239, 1),
-    6px -6px 15px 3px rgba(0, 53, 255, 1); /* Более выраженная тень при наведении */
+.yearly-thrown {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 56px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    border-color: white;
+    background-color: #55535B;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    font-family: 'SF Pro Display', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.yearly:active {
-    transform: translateY(0);
-    box-shadow: 2px -2px 8px 1px rgba(188, 31, 239, 0.6),
-    2px -2px 8px 1px rgba(0, 53, 255, 0.6); /* Ослабленная тень при клике */
-}
+/*.yearly:hover {*/
+/*    transform: translateY(-2px);*/
+/*    box-shadow: 6px -6px 15px 3px rgba(188, 31, 239, 1),*/
+/*    6px -6px 15px 3px rgba(0, 53, 255, 1); !* Более выраженная тень при наведении *!*/
+/*}*/
+
+/*.yearly:active {*/
+/*    transform: translateY(0);*/
+/*    box-shadow: 2px -2px 8px 1px rgba(188, 31, 239, 0.6),*/
+/*    2px -2px 8px 1px rgba(0, 53, 255, 0.6); !* Ослабленная тень при клике *!*/
+/*}*/
 /* Лента "BEST OFFER" */
 .ribbon {
     position: absolute;
@@ -157,7 +166,22 @@ body {
     border-radius: 16px; /* Закругленные углы */
     background: linear-gradient(to right, #BC1FEF, #0035FF) border-box; /* Градиент на рамке */
     background-clip: padding-box, border-box; /* Обрезка фона */
+    background-color: #55535B;
     color: #fff; /* Цвет текста внутри */
+    text-align: center; /* Центровка текста */
+    font-size: 13px;
+}
+
+.ribbon-thrown {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    display: inline-block;
+    padding: 2px 22px; /* Внутренние отступы */
+    background-color: white;
+    border: 1px solid white; /* Создание рамки */
+    border-radius: 16px; /* Закругленные углы */
+    color: black; /* Цвет текста внутри */
     text-align: center; /* Центровка текста */
     font-size: 13px;
 }
@@ -170,10 +194,28 @@ body {
     margin-bottom: 16px;
     width: 100%;
     height: 56px;
+    border-radius: 40px;
+    background-color: #24222B;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 16px;
+    font-family: 'SF Pro Display', sans-serif;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.weekly-thrown {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 56px;
     border: 1px solid transparent;
     border-radius: 40px;
     border-color: white;
-    background-color: gray;
+    background-color: #55535B;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
     font-size: 16px;
@@ -189,7 +231,7 @@ body {
 
 .pricing-title {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     margin: 0;
     width: 150px;
     /*display: flex;*/
@@ -200,7 +242,7 @@ body {
 .pricing-subtitle {
     font-family: 'SF Pro Display', sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 200;
     margin: 4px 0 0;
     opacity: 0.7;
 }
@@ -209,7 +251,7 @@ body {
 .price {
     font-size: 16px;
     text-align: start;
-    font-weight: 400;
+    font-weight: 200;
     margin-right: 36px;
     opacity: 0.7;
 
@@ -226,11 +268,9 @@ body {
     background-color: white;
     color: black;
     font-weight: 590;
-    /*padding: 16px;*/
     border-radius: 100px;
     border: none;
     font-size: 20px;
-    /*margin-top: 16px;*/
     cursor: pointer;
     transition: transform 0.2s;
 }
@@ -253,7 +293,6 @@ body {
     align-items: end;
     align-content: end;
     justify-content: space-between;
-    /*margin-top: 24px;*/
     font-size: 13px;
     font-weight: 200;
     color: #ffffff;
@@ -273,7 +312,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,7 +338,7 @@ body {
     width: 100%;
     height: 100%;
     /*max-width: 400px;*/
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 

@@ -224,6 +224,29 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/*.pricing-input {*/
+/*    display: none;*/
+/*}*/
+
+/* Стили для выбранной опции */
+.pricing-option {
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.pricing-input:checked + .ribbon,
+.pricing-input:checked ~ .pricing-info,
+/*.pricing-input:checked ~ .price {*/
+/*    color: #fff;*/
+/*}*/
+
+/*!* Стиль для выбранной кнопки *!*/
+/*.pricing-input:checked + * {*/
+/*    background-color: #BC1FEF; !* Активный фон *!*/
+/*    box-shadow: 0 0 20px rgba(188, 31, 239, 0.8);*/
+/*    transform: translateY(-2px);*/
+/*}*/
+
 .pricing-info {
     text-align: left;
     flex-grow: 1;
@@ -331,6 +354,7 @@ body {
 /* Контент модального окна */
 .modal-content {
     position: relative;
+    justify-items: center;
     background: transparent;
     border-radius: 10px;
     top: 246px;

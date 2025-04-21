@@ -30,46 +30,43 @@ body {
 .features-container {
     display: flex;
     justify-content: space-between;
-    grid-template-columns: repeat(3, 1fr);
     gap: 6px;
     margin-bottom: 34px;
 }
 
 .feature-card {
     flex: 1;
-    height: 146px;
+    min-height: 146px; /* Минимальная высота */
+    height: auto; /* Автоматическая высота */
     border-radius: 15px;
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
     color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px;
+    /*padding: 10px;*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .feature-text-container {
     position: relative;
     width: 100%;
-    top: 60px;
-    right: 8px;
-    padding: 8px;
+    box-sizing: border-box; /* Включает padding в размеры */
+    padding: 96px 8px;
     padding-bottom: 12px;
-    box-sizing: border-box;
 }
 
 .feature-card p {
-    margin: 0;
     font-family: 'SF Pro Display', sans-serif;
     font-weight: 200;
     color: #fff;
+    padding-bottom: 8px;
     font-size: 12px;
     text-align: start;
-    word-break: break-word;
+    white-space: normal; /* Разрешить перенос текста */
+    word-break: break-word; /* Перенос длинных слов */
 }
 
 .art-creation {
@@ -242,10 +239,11 @@ body {
 }
 
 .pricing-title {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     margin: 0;
     width: 150px;
+    white-space: nowrap;
     /*display: flex;*/
     align-items: center;
 
@@ -253,7 +251,7 @@ body {
 
 .pricing-subtitle {
     font-family: 'SF Pro Display', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 200;
     margin: 4px 0 0;
     opacity: 0.7;
@@ -261,7 +259,6 @@ body {
 
 
 .price {
-    font-size: 16px;
     text-align: start;
     font-weight: 200;
     margin-right: 36px;
@@ -296,23 +293,29 @@ body {
 }
 
 .footer-links {
-    position: fixed;
+    position: absolute;
+    left: 0; /* Начало от левого края экрана */
+    right: 0; /* Конец у правого края экрана */
     bottom: 58px;
-    left: 54px;
-    right: 54px;
-
+    margin: 0;
     display: flex;
-    align-items: end;
-    align-content: end;
-    justify-content: space-between;
-    font-size: 13px;
+    align-items: center; /* Вертикальное выравнивание */
+    justify-content: space-around; /* Равномерное распределение ссылок */
     font-weight: 200;
     color: #ffffff;
+    gap: 16px;
+    padding: 0 16px; /* Отступы для ссылок от края */
+    max-width: unset; /* Убирает ограничение ширины */
+    width: 100vw; /* Полная ширина окна браузера */
+    box-sizing: border-box; /* Учитывает отступы в ширине */
 }
 
 .footer-links a {
+    display: flex;
     color: inherit;
     text-decoration: none;
+    font-size: 13px; /* Фиксированный размер, как в макете */
+    white-space: nowrap; /* Запрещает перенос текста */
 }
 
 /*=================MODAL===============*/
@@ -346,11 +349,10 @@ body {
     justify-items: center;
     background: transparent;
     border-radius: 10px;
-    top: 246px;
+    top: 200px;
     padding: 20px;
     width: 100%;
     height: 100%;
-    /*max-width: 400px;*/
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }

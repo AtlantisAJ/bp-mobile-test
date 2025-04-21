@@ -1,20 +1,28 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'), // Билд в папку docs для GitHub Pages
     filename: 'bundle.js',
     clean: true,
+    assetModuleFilename: 'image/[name][ext]', // Для изображений
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: false,
+            },
+          },
+        ],
       },
       {
         test: /\.js$/,
@@ -29,9 +37,6 @@ module.exports = {
       {
         test: /\.(png|jpg|jpeg|gif|ico)$/,
         type: 'asset/resource',
-        generator: {
-          filename: 'image/[name][ext]',
-        },
       },
       {
         test: /\.json$/,
@@ -43,17 +48,15 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: 'src/favicon.ico', to: 'favicon.ico' },
-        { from: 'src/locales', to: 'locales' },
-      ],
-    }),
   ],
   devServer: {
-    static: './dist',
+    static: path.join(__dirname, 'docs'),
     port: 8080,
     open: true,
     historyApiFallback: true,
+    hot: true,
+  },
+  optimization: {
+    minimize: true, // Минификация в production
   },
 };

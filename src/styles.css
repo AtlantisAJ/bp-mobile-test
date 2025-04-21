@@ -1,10 +1,15 @@
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-image: url("./image/backgroundImage.png");
+    background-image: image-set(
+            url("./image/backgroundImage.png") 1x,
+            url("./image/backgroundImage@2x.png") 2x,
+            url("./image/backgroundImage@3x.png") 3x
+    );
     background-size: cover;
     color: white;
     min-height: 100vh;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;

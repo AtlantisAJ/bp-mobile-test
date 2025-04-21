@@ -29,13 +29,9 @@ function getLanguage() {
 }
 
 // Замена плейсхолдеров
-function replacePlaceholders(str, context) {
-  return str.replace(/{{price}}/g, () => {
-    if (str.includes('Just {{price}} per year')) return prices.yearly;
-    if (str.includes('{price} <br>per week')) {
-      return context === 'yearly' ? prices.yearly_per_week : prices.weekly;
-    }
-    return '{{price}}';
+function replacePlaceholders(str, values) {
+  return str.replace(/{{(\w+)}}/g, (_, key) => {
+    return values[key] || `{{${key}}}`; // Если ключ не найден, оставляем как есть
   });
 }
 
@@ -46,8 +42,12 @@ function updateTranslations(translations, lang) {
     const key = element.getAttribute('data-i18n');
     if (translations[key]) {
       let text = translations[key];
-      const context = element.closest('.yearly') ? 'yearly' : element.closest('.weekly') ? 'weekly' : null;
-      text = replacePlaceholders(text, context);
+
+      // Заменяем {{price}} на значение из объекта prices
+      text = replacePlaceholders(text, {
+        price: key.includes("per year") ? prices.yearly : prices.weekly,
+      });
+
       element.innerHTML = text;
     } else {
       console.warn(`Missing translation for key: ${key}`);

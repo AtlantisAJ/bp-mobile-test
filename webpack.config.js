@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         test: /\.json$/,
-        type: 'json', // Webpack 5 поддерживает JSON как модуль
+        type: 'json',
       },
     ],
   },
@@ -46,7 +46,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/favicon.ico', to: 'favicon.ico' },
-        { from: 'src/locales', to: 'locales' }, // Копируем папку locales
+        { from: 'src/locales', to: 'locales' },
       ],
     }),
   ],

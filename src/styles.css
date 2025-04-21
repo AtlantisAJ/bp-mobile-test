@@ -76,20 +76,27 @@ body {
 }
 
 .art-creation {
-    background-image:
-            url('./image/img1.png')
-
+    background-image: image-set(
+            url('./image/img1.png') 1x,
+            url('./image/img1@2x.png') 2x,
+            url('./image/img1@3x.png') 3x
+    );
 }
 
 .exclusive-styles {
-    background-image:
-            url('./image/img2.png')
-
+    background-image: image-set(
+            url('./image/img2.png') 1x,
+            url('./image/img2@2x.png') 2x,
+            url('./image/img2@3x.png') 3x
+    );
 }
 
 .magic-avatars {
-    background-image:
-            url('./image/img3.png')
+    background-image: image-set(
+            url('./image/img3.png') 1x,
+            url('./image/img3@2x.png') 2x,
+            url('./image/img3@3x.png') 3x
+    );
 }
 
 .pricing-option {

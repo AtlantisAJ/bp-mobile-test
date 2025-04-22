@@ -5,10 +5,10 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'docs'), // Билд в папку docs для GitHub Pages
+    path: path.resolve(__dirname, 'docs'),
     filename: 'bundle.js',
     clean: true,
-    assetModuleFilename: 'image/[name][ext]', // Для изображений
+    assetModuleFilename: 'image/[name][ext]',
   },
   module: {
     rules: [
@@ -57,6 +57,6 @@ module.exports = {
     hot: true,
   },
   optimization: {
-    minimize: true, // Минификация в production
+    minimize: true,
   },
 };

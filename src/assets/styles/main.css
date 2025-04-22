@@ -327,8 +327,8 @@ body {
 }
 
 .close-icon {
-    width: 1em; /* Примерно 20px при font-size: 1.25rem */
-    height: 1em; /* Примерно 20px при font-size: 1.25rem */
+    width: 1em;
+    height: 1em;
     display: block;
 }
 

@@ -2,9 +2,9 @@
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
     background-image: image-set(
-            url("../image/backgroundImage.png") 1x,
-            url("../image/backgroundImage@2x.png") 2x,
-            url("../image/backgroundImage@3x.png") 3x
+        url('../image/backgroundImage.png') 1x,
+        url('../image/backgroundImage@2x.png') 2x,
+        url('../image/backgroundImage@3x.png') 3x
     );
     background-size: cover;
     color: white;
@@ -14,25 +14,24 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem; /* 24px / 16 */
+    padding: 1.5rem;
     margin: 0;
-    /* Установка базового font-size для корректной работы em в дочерних элементах, если потребуется */
     font-size: 1rem; /* 16px */
 }
 
 .container {
     width: 100%;
-    max-width: 25rem; /* 400px / 16 */
+    max-width: 25rem;
 }
 
 .title {
     text-align: center;
-    margin-bottom: 1.5rem; /* 24px / 16 */
+    margin-bottom: 1.5rem;
 }
 
 .title h1 {
-    font-size: 2.625rem; /* 42px / 16 */
-    font-weight: 820; /* font-weight не использует px */
+    font-size: 2.625rem;
+    font-weight: 820;
     white-space: normal;
     overflow-wrap: break-word;
 }
@@ -40,15 +39,15 @@ body {
 .features-container {
     display: flex;
     justify-content: space-between;
-    gap: 0.375rem; /* 6px / 16 */
-    margin-bottom: 2.125rem; /* 34px / 16 */
+    gap: 0.375rem;
+    margin-bottom: 2.125rem;
 }
 
 .feature-card {
     flex: 1;
-    min-height: 9.125rem; /* 146px / 16 */
+    min-height: 9.125rem;
     height: auto;
-    border-radius: 0.9375rem; /* 15px / 16 */
+    border-radius: 0.9375rem;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -56,14 +55,14 @@ body {
     align-items: start;
     text-align: start;
     color: #fff;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px / 16, 10px / 16 */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .feature-text-container {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    padding: 6rem 0.5rem 0.75rem; /* 96px / 16, 8px / 16, 12px / 16 */
+    padding: 6rem 0.5rem 0.75rem;
 }
 
 .feature-card p {
@@ -79,34 +78,34 @@ body {
 
 .art-creation {
     background-image: image-set(
-            url('../image/img1.png') 1x,
-            url('../image/img1@2x.png') 2x,
-            url('../image/img1@3x.png') 3x
+        url('../image/img1.png') 1x,
+        url('../image/img1@2x.png') 2x,
+        url('../image/img1@3x.png') 3x
     );
 }
 
 .exclusive-styles {
     background-image: image-set(
-            url('../image/img2.png') 1x,
-            url('../image/img2@2x.png') 2x,
-            url('../image/img2@3x.png') 3x
+        url('../image/img2.png') 1x,
+        url('../image/img2@2x.png') 2x,
+        url('../image/img2@3x.png') 3x
     );
 }
 
 .magic-avatars {
     background-image: image-set(
-            url('../image/img3.png') 1x,
-            url('../image/img3@2x.png') 2x,
-            url('../image/img3@3x.png') 3x
+        url('../image/img3.png') 1x,
+        url('../image/img3@2x.png') 2x,
+        url('../image/img3@3x.png') 3x
     );
 }
 
 .pricing-option {
     width: 100%;
-    height: 3.5rem; /* 56px / 16 */
-    padding: 0.5625rem 1.5rem; /* 9px / 16, 24px / 16 */
-    border-radius: 6.25rem; /* 100px / 16 */
-    margin-bottom: 0.5rem; /* 8px / 16 */
+    height: 3.5rem;
+    padding: 0.5625rem 1.5rem;
+    border-radius: 6.25rem;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,7 +115,7 @@ body {
 }
 
 .pricing-option:hover {
-    transform: translateY(-0.125rem); /* -2px / 16 */
+    transform: translateY(-0.125rem);
 }
 
 .pricing-option:active {
@@ -129,52 +128,52 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 3.5rem; /* 56px / 16 */
-    border-radius: 2.5rem; /* 40px / 16 */
-    background-color: #24212E;
-    box-shadow: 0.25rem -0.25rem 0.625rem 0.125rem rgba(188, 31, 239, 0.8), /* 4px / 16, 10px / 16, 2px / 16 */
-    0.25rem -0.25rem 0.625rem 0.125rem rgba(0, 53, 255, 0.8); /* 4px / 16, 10px / 16, 2px / 16 */
+    height: 3.5rem;
+    border-radius: 2.5rem;
+    background-color: #24212e;
+    box-shadow: 0.25rem -0.25rem 0.625rem 0.125rem rgba(188, 31, 239, 0.8),
+        0.25rem -0.25rem 0.625rem 0.125rem rgba(0, 53, 255, 0.8);
     color: white;
-    font-size: 1rem; /* 16px / 16 */
+    font-size: 1rem;
     font-family: 'SF Pro Display', sans-serif;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .yearly-thrown {
-    border: 1px solid white; /* Оставляем 1px для тонкой рамки */
-    background-color: #55535B;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px / 16, 10px / 16 */
+    border: 1px solid white;
+    background-color: #55535b;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .ribbon {
     position: absolute;
-    top: -0.75rem; /* -12px / 16 */
-    right: 1.5rem; /* 24px / 16 */
-    padding: 0.125rem 1.375rem; /* 2px / 16, 22px / 16 */
-    border: 1px solid transparent; /* Оставляем 1px */
-    border-radius: 1rem; /* 16px / 16 */
-    background: linear-gradient(to right, #BC1FEF, #0035FF) border-box;
+    top: -0.75rem;
+    right: 1.5rem;
+    padding: 0.125rem 1.375rem;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    background: linear-gradient(to right, #bc1fef, #0035ff) border-box;
     background-clip: padding-box, border-box;
-    background-color: #55535B;
+    background-color: #55535b;
     color: #fff;
-    font-size: 0.8125rem; /* 13px / 16 */
+    font-size: 0.8125rem;
     text-align: center;
     white-space: nowrap;
 }
 
 .ribbon-thrown {
     position: absolute;
-    top: -0.75rem; /* -12px / 16 */
-    right: 1.5rem; /* 24px / 16 */
+    top: -0.75rem;
+    right: 1.5rem;
     display: inline-block;
-    padding: 0.125rem 1.375rem; /* 2px / 16, 22px / 16 */
+    padding: 0.125rem 1.375rem;
     background-color: white;
-    border: 1px solid white; /* Оставляем 1px */
-    border-radius: 1rem; /* 16px / 16 */
+    border: 1px solid white;
+    border-radius: 1rem;
     color: black;
     text-align: center;
-    font-size: 0.8125rem; /* 13px / 16 */
+    font-size: 0.8125rem;
 }
 
 .weekly {
@@ -183,21 +182,21 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 3.5rem; /* 56px / 16 */
-    border-radius: 2.5rem; /* 40px / 16 */
-    background-color: #24222B;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px / 16, 10px / 16 */
+    height: 3.5rem;
+    border-radius: 2.5rem;
+    background-color: #24222b;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     color: white;
-    font-size: 1rem; /* 16px / 16 */
+    font-size: 1rem;
     font-family: 'SF Pro Display', sans-serif;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .weekly-thrown {
-    border: 1px solid white; /* Оставляем 1px */
-    background-color: #55535B;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px / 16, 10px / 16 */
+    border: 1px solid white;
+    background-color: #55535b;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .pricing-info {
@@ -206,7 +205,7 @@ body {
 }
 
 .pricing-title {
-    font-size: 0.9375rem; /* 15px / 16 */
+    font-size: 0.9375rem;
     font-weight: 400;
     margin: 0;
     white-space: nowrap;
@@ -214,41 +213,41 @@ body {
 
 .pricing-subtitle {
     font-family: 'SF Pro Display', sans-serif;
-    font-size: 0.9375rem; /* 15px / 16 */
+    font-size: 0.9375rem;
     font-weight: 200;
-    margin: 0.25rem 0 0; /* 4px / 16 */
+    margin: 0.25rem 0 0;
     opacity: 0.7;
     white-space: nowrap;
 }
 
 .price {
-    font-size: 0.9375rem; /* 15px / 16 */
+    font-size: 0.9375rem;
     text-align: start;
     font-weight: 200;
-    margin-right: 2.25rem; /* 36px / 16 */
+    margin-right: 2.25rem;
     opacity: 0.7;
 }
 
 .price span {
-    font-size: 0.875rem; /* 14px / 16 */
+    font-size: 0.875rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .continue-btn {
     width: 100%;
-    height: 3.5rem; /* 56px / 16 */
+    height: 3.5rem;
     background-color: white;
     color: black;
     font-weight: 590;
-    border-radius: 6.25rem; /* 100px / 16 */
+    border-radius: 6.25rem;
     border: none;
-    font-size: 1.25rem; /* 20px / 16 */
+    font-size: 1.25rem;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
 .continue-btn:hover {
-    transform: translateY(-0.125rem); /* -2px / 16 */
+    transform: translateY(-0.125rem);
 }
 
 .continue-btn:active {
@@ -259,15 +258,15 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 3.625rem; /* 58px / 16 */
+    bottom: 3.625rem;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
     font-weight: 200;
     color: #ffffff;
-    gap: 1rem; /* 16px / 16 */
-    padding: 0 1rem; /* 16px / 16 */
+    gap: 1rem;
+    padding: 0 1rem;
     max-width: unset;
     width: 100vw;
     box-sizing: border-box;
@@ -277,7 +276,7 @@ body {
     display: flex;
     color: inherit;
     text-decoration: none;
-    font-size: 0.8125rem; /* 13px / 16 */
+    font-size: 0.8125rem;
     white-space: nowrap;
 }
 
@@ -306,41 +305,37 @@ body {
     position: relative;
     justify-items: center;
     background: transparent;
-    border-radius: 0.625rem; /* 10px / 16 */
-    top: 20vh;
-    padding: 1.25rem; /* 20px / 16 */
+    border-radius: 0.625rem;
+    top: 10vh;
+    padding: 1.25rem;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2); /* 4px / 16, 10px / 16 */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
 .close-modal-btn {
     position: fixed;
-    top: 4.375rem; /* 70px / 16 */
-    left: 1.375rem; /* 22px / 16 */
+    top: 4.375rem;
+    left: 1.375rem;
     background: transparent;
     border: none;
-    font-size: 1.25rem; /* 20px / 16 */ /* Размер можно оставить в rem или использовать em для масштабирования с родительским текстом */
-    padding: 0; /* Убрал лишний padding, если кнопка содержит только иконку */
-    line-height: 1; /* Для выравнивания иконки */
+    font-size: 1.25rem;
+    padding: 0;
+    line-height: 1;
     cursor: pointer;
 }
 
 .close-icon {
-    /* Используем em, чтобы иконка масштабировалась относительно font-size кнопки */
     width: 1em; /* Примерно 20px при font-size: 1.25rem */
     height: 1em; /* Примерно 20px при font-size: 1.25rem */
-    /* Или можно использовать rem: */
-    /* width: 1.3125rem; */ /* 21px / 16 */
-    /* height: 1.3125rem; */ /* 21px / 16 */
-    display: block; /* Чтобы избежать лишних отступов */
+    display: block;
 }
 
 .open-modal-btn {
-    padding: 0.625rem 1.25rem; /* 10px / 16, 20px / 16 */
-    font-size: 1rem; /* 16px / 16 */
-    border-radius: 0.3125rem; /* 5px / 16 */
+    padding: 0.625rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.3125rem;
     background: #3b82f6;
     color: white;
     border: none;
@@ -357,7 +352,8 @@ body {
 /* for iPhone SE (375x667) - ~23.4em x 41.7em */
 /* Целевое правило для iPhone 14 Pro/14/SE - max-width: 393px (~24.5em) */
 /* Используем max-width и max-height для охвата схожих разрешений */
-@media only screen and (max-width: 24.5625em) { /* 393px / 16 */
+@media only screen and (max-width: 24.5625em) {
+    /* 393px / 16 */
     .container {
         /* Выбираем значение между 350px и 370px, например 360px */
         max-width: 22.5rem; /* 360px / 16 */
@@ -381,7 +377,7 @@ body {
     }
     .modal-content {
         /* Выбираем значение между 10vh и 18vh, например 15vh */
-        top: 15vh;
+        top: 10vh;
         /* Выбираем значение между 16px и 18px, например 17px */
         padding: 1.0625rem; /* 17px / 16 */
     }
@@ -398,11 +394,11 @@ body {
     }
 }
 
-
 /* for iPhone XR/11 (414x896) - ~25.9em x 56em */
 /* Используем min-width чтобы эти стили применялись к большим экранам,
    перекрывая стили из max-width: 24.5625em */
-@media only screen and (min-width: 24.625em) { /* ~394px / 16 */
+@media only screen and (min-width: 24.625em) {
+    /* ~394px / 16 */
     .container {
         max-width: 25rem; /* 400px / 16 */
     }
